@@ -49,7 +49,7 @@ sortDescButton.addEventListener("click", function () {
 });
 
 function searchCountry() {
-  var countryName = document.getElementById("country_input").value.trim();
+  let countryName = document.getElementById("country_input").value.trim();
   if (!countryName) {
     document.getElementById("country_details").innerHTML =
       "<p>Please enter a country name.</p>";
@@ -105,8 +105,8 @@ function searchCountry() {
     })
 
     .then(function (regionData) {
-      var region = regionData[0].region;
-      var sameRegionCountriesList = regionData
+      let region = regionData[0].region;
+      let sameRegionCountriesList = regionData
         .map(function (c) {
           return `
             <div class="country-card">
