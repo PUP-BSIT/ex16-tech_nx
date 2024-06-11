@@ -1,0 +1,169 @@
+body {
+  background-color: #ad88c6;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  list-style-position: inside;
+  padding: 10px;
+  margin: 0;
+  min-height: 100vh;
+  max-width: 100%;
+  font-family: sans-serif;
+  font-size: medium;
+}
+
+.main-body {
+  background-color: #e1afd1;
+  padding: 10px;
+  width: 100%;
+  border: 3px dotted white;
+}
+
+hr {
+  border-top: 1px dotted #ffe6e6;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+h1 {
+  font-style: italic;
+  font-weight: 1000;
+}
+
+.thoughts {
+  font-size: x-large;
+}
+
+.main-body > h2 {
+  font-family: georgia;
+}
+
+.works,
+.testimonial {
+  border: 5px solid #ffe6e6;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+.gallery {
+  background-color: #ffe6e6;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.contact-header {
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 200px;
+  height: 25px;
+  background: transparent;
+}
+
+button {
+  font-size: large;
+  font-weight: bold;
+  width: 250px;
+  height: 35px;
+  background: snow;
+}
+
+#countries_button {
+  background-color: #b05deb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: bold;
+  width: 150px;
+  height: 55px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#countries_button:hover {
+  background-color: #c48de4;
+}
+
+.contact-form {
+  background-color: #e1afd1;
+}
+
+.copy {
+  text-align: left;
+}
+
+.message {
+  text-align: left;
+}
+
+textarea {
+  background: snow;
+}
+
+.email {
+  grid-area: email;
+}
+
+.fname {
+  grid-area: fname;
+}
+
+.age {
+  grid-area: age;
+}
+
+.subject {
+  grid-area: subject;
+}
+
+.submit-form {
+  grid-area: submit;
+}
+
+.email,
+.fname,
+.age,
+.subject,
+.submit-form,
+.comment {
+  border: 1px solid black;
+  padding: 15px;
+}
+
+.container > form {
+  font-size: medium;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "email fname"
+    "age subject"
+    "submit submit";
+}
+
+@media (max-width: 426px) {
+  .body {
+    display: block;
+  }
+
+  .container > form {
+    display: block;
+    grid-template-areas:
+      "email"
+      "fname"
+      "age"
+      "subject"
+      "submit";
+  }
+}
