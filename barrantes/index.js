@@ -70,11 +70,11 @@ commentManager.displayComments();
 
 
 function searchCountry() {
-    let countryName = document.getElementById("countryInput").value.trim();
+    let countryName = document.getElementById("country_input").value.trim();
     if (!countryName) {
-      document.getElementById("countryDetails").innerHTML =
+      document.getElementById("country_details").innerHTML =
         "<p>Please enter a country name.</p>";
-      document.getElementById("sameRegionCountries").innerHTML = "";
+      document.getElementById("same_region_countries").innerHTML = "";
       return;
     }
   
@@ -114,7 +114,7 @@ function searchCountry() {
           </p>
         `;
   
-        document.getElementById("countryDetails").innerHTML = details;
+        document.getElementById("country_details").innerHTML = details;
   
         return fetch("https://restcountries.com/v3.1/region/" + country.region)
           .then(function (response) {
@@ -137,16 +137,16 @@ function searchCountry() {
               `;
             }
   
-            document.getElementById("sameRegionCountries").innerHTML = `
+            document.getElementById("same_region_countries").innerHTML = `
               <h2>Countries in the Same Region (${region})</h2>
               <div class="country-list">${sameRegionCountriesList}</div>
             `;
           })
           .catch(function (error) {
             console.error("Error fetching data:", error);
-            document.getElementById("countryDetails").innerHTML = 
+            document.getElementById("country_details").innerHTML = 
                     "<p>An error occurred: " + error.message + "</p>";
-            document.getElementById("sameRegionCountries").innerHTML = "";
+            document.getElementById("same_region_countries").innerHTML = "";
           });
       });
   }
