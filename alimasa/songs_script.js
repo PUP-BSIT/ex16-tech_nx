@@ -5,7 +5,7 @@ function submitSongs() {
     const album = document.querySelector("#album").value;
     const duration = document.querySelector("#duration").value;
 
-    fetch("./insert_rows.php", {
+    fetch("./songs.php", {
       method: "POST",
       headers: {
         "Content-type": "x-www-form-urlencoded",
