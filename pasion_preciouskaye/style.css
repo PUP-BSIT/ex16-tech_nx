@@ -55,32 +55,32 @@ button:hover {
   background-color: #0056b3;
 }
 
-#countryDetails {
+#countrydetails {
   margin-top: 20px;
   text-align: left;
 }
 
-#countryDetails img {
+#countrydetails img {
   display: block;
   margin: 10px 0;
 }
 
-#sameRegionCountries {
+#sameregioncountries {
   margin-top: 20px;
   text-align: left;
 }
 
-#sameRegionCountries h2 {
+#sameregioncountries h2 {
   margin-bottom: 10px;
 }
 
-#sameRegionCountries div {
+#sameregioncountries div {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-#sameRegionCountries div > div {
+#samergioncountries div > div {
   display: inline-block;
   margin: 10px;
   text-align: center;
@@ -142,7 +142,7 @@ img {
 }
 
 .email,
-.fullname,
+.full_name,
 .age,
 .subject,
 .copy {
@@ -165,7 +165,7 @@ img {
   grid-area: email;
 }
 
-.fullname {
+.full_name {
   grid-area: fullname;
 }
 
@@ -195,7 +195,7 @@ img {
   .container > form {
     display: grid;
     grid-template-areas:
-      "email fullname"
+      "email full_name"
       "age subject"
       "copy copy"
       "message message"

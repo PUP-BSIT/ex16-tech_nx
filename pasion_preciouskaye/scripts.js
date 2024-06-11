@@ -64,7 +64,7 @@ function searchCountry() {
   var countryName = document.getElementById('countryInput').value.trim();
   if (!countryName) {
     document.getElementById('countryDetails').innerHTML = '<p>Please enter a country name.</p>';
-    document.getElementById('sameregioncountries').innerHTML = '';
+    document.getElementById('same_region_countries').innerHTML = '';
     return;
   }
 
@@ -93,7 +93,7 @@ function searchCountry() {
       <p><strong>Timezones:</strong> ${country.timezones ? 
           country.timezones.join(', ') : 'N/A'}</p>
   `;
-      document.getElementById('countryDetails').innerHTML = details;
+      document.getElementById('country_details').innerHTML = details;
 
       return fetch('https://restcountries.com/v3.1/region/' + country.region);
     })
