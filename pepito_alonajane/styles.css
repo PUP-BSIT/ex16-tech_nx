@@ -64,7 +64,7 @@
   cursor: not-allowed;
 }
 
-#commentsSection {
+#comment_section {
   margin-top: 20px;
   margin-right: 400px;
 }
@@ -115,8 +115,8 @@
   grid-area: email;
 }
 
-.full_name {
-  grid-area: full_name;
+.full-name {
+  grid-area: full-name;
 }
 
 .age {
@@ -141,7 +141,7 @@
 }
 
 .email,
-.full_name, 
+.full-name, 
 .subject,
 .age, 
 .message,
@@ -169,7 +169,7 @@
   .contact>form {
   display: grid;
   grid-template-areas:
-  "email full_name"
+  "email full-name"
   "age subject"
   "copy copy"
   "message message"
@@ -182,7 +182,7 @@
   display: grid;
   grid-template-areas: 
   "email"
-  "full_name"
+  "full-name"
   "age"
   "subject"
   "copy"

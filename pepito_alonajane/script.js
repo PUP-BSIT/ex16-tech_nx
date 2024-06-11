@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function displayComments() {
     const commentsSection = document.getElementById
-    ('commentsSection');
+    ('comment_section');
     commentsSection.innerHTML = '';
 
     comments.forEach(function (comment) {
@@ -82,9 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function searchCountry() {
     let countryName = document.getElementById
-    ('country_Input').value.trim();
+    ('country_input').value.trim();
     if (!countryName) {
-      document.getElementById('country_Details').innerHTML = 
+      document.getElementById('country_details').innerHTML = 
           '<p>Please provide a country name.</p>';
       document.getElementById('same_region_countries').innerHTML = '';
       return;
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
   })
   .catch(function(error) {
       console.error('Error fetching data:', error);
-      document.getElementById('country_Details').innerHTML
+      document.getElementById('country_details').innerHTML
        = '<p>An error occurred: ' + error.message + '</p>';
       document.getElementById('same_region_countries').innerHTML = '';
   });
