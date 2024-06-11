@@ -1,9 +1,9 @@
 function submitUser() {
-    const Book_Name = document.querySelector("#Book_Name").value;
-    const Book_Genre = document.querySelector("#Book_Genre").value;
-    const Release_Date = document.querySelector("#Release_Date").value;
-    const Author = document.querySelector("#Author").value;
-    const Rating = document.querySelector("#Rating").value;
+    const Book_Name = document.querySelector("#book_name").value;
+    const Book_Genre = document.querySelector("#book_genre").value;
+    const Release_Date = document.querySelector("#release_date").value;
+    const Author = document.querySelector("#author").value;
+    const Rating = document.querySelector("#aating").value;
 
     fetch("./book_journal.php", {
         method: "POST",
@@ -40,16 +40,17 @@ fetch("./book_journal.php")
 document.getElementById("get_books").addEventListener("click", bookList);
 
 function updateBook() {
-    const id = document.querySelector("#Update_ID").value;
-    const bookName = document.querySelector("#Update_Book_Name").value;
-    const bookGenre = document.querySelector("#Update_Book_Genre").value;
-    const releaseDate = document.querySelector("#Update_Release_Date").value;
-    const author = document.querySelector("#Update_Author").value;
-    const rating = document.querySelector("#Update_Rating").value;
+    const id = document.querySelector("#update_id").value;
+    const bookName = document.querySelector("#update_book_name").value;
+    const bookGenre = document.querySelector("#update_book_genre").value;
+    const releaseDate = document.querySelector("#update_release_date").value;
+    const author = document.querySelector("#update_author").value;
+    const rating = document.querySelector("#update_rating").value;
 
     fetch('./book_journal.php', {
         method: 'PATCH', 
-        body: `ID=${id}&Book_Name=${bookName}&Book_Genre=${bookGenre}&Release_Date=${releaseDate}&Author=${author}&Rating=${rating}`
+        body: `ID=${id}&Book_Name=${bookName}&Book_Genre=${bookGenre}
+        &Release_Date=${releaseDate}&Author=${author}&Rating=${rating}`
     })
     .then(response => response.text())
     .catch(error => console.error('Error:', error));

@@ -8,44 +8,44 @@
 <body>
     <h1>Book Details</h1>
     <h2>Create Book Entry</h2>
-    <form id="createForm">
+    <form id="create-form">
         <label for="Book_Name">Book Name:</label>
-        <input type="text" id="Book_Name" name="Book_Name" required><br><br>
+        <input type="text" id="book_name" name="Book_Name" required><br><br>
         
         <label for="Book_Genre">Book Genre:</label>
-        <input type="text" id="Book_Genre" name="Book_Genre" required><br><br>
+        <input type="text" id="book_genre" name="Book_Genre" required><br><br>
         
         <label for="Release_Date">Release Date:</label>
-        <input type="date" id="Release_Date" name="Release_Date" required><br><br>
+        <input type="date" id="release_date" name="Release_Date" required><br><br>
         
         <label for="Author">Author:</label>
-        <input type="text" id="Author" name="Author" required><br><br>
+        <input type="text" id="author" name="Author" required><br><br>
         
         <label for="Rating">Rating:</label>
-        <input type="number" id="Rating" name="Rating" required><br><br>
+        <input type="number" id="rating" name="Rating" required><br><br>
         
         <button type="submit" onclick="submitUser()">Save Book</button>
     </form>
     <h2>Update Book Entry</h2>
     <form id="updateForm">
         <label for="Update_ID">ID:</label>
-        <input type="text" id="Update_ID" name="Update_ID" required><br><br>
+        <input type="text" id="update_id" name="Update_ID" required><br><br>
 
         <!-- Fields for updating existing book entry -->
         <label for="Update_Book_Name">Updated Book Name:</label>
-        <input type="text" id="Update_Book_Name" name="Update_Book_Name"><br><br>
+        <input type="text" id="update_book_name" name="Update_Book_Name"><br><br>
         
         <label for="Update_Book_Genre">Updated Book Genre:</label>
-        <input type="text" id="Update_Book_Genre" name="Update_Book_Genre"><br><br>
+        <input type="text" id="update_book_genre" name="Update_Book_Genre"><br><br>
         
         <label for="Update_Release_Date">Updated Release Date:</label>
-        <input type="date" id="Update_Release_Date" name="Update_Release_Date"><br><br>
+        <input type="date" id="update_release_date" name="Update_Release_Date"><br><br>
         
         <label for="Update_Author">Updated Author:</label>
-        <input type="text" id="Update_Author" name="Update_Author"><br><br>
+        <input type="text" id="update_author" name="Update_Author"><br><br>
         
         <label for="Update_Rating">Updated Rating:</label>
-        <input type="number" id="Update_Rating" name="Update_Rating"><br><br>
+        <input type="number" id="update_rating" name="Update_Rating"><br><br>
         
         <button type="submit" onclick="updateBook()">Update Book</button>
     </form>
