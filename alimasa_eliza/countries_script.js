@@ -55,7 +55,8 @@ function countrySearch() {
     })
     .catch(function(error) {
     console.error('Error fetching data:', error);
-    document.getElementById('country_details').innerHTML = '<p>An error occurred: '
+    document.getElementById('country_details').innerHTML = 
+              '<p>An error occurred: '
               + error.message + '</p>';
     document.getElementById('same_region_countries').innerHTML = '';
     });
