@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!countryName) {
       document.getElementById('country_Details').innerHTML = 
           '<p>Please provide a country name.</p>';
-      document.getElementById('same_Region_Countries').innerHTML = '';
+      document.getElementById('same_region_countries').innerHTML = '';
       return;
   }
   
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <p><strong>Timezones:</strong> ${country.timezones ? 
               country.timezones.join(', ') : 'N/A'}</p>
       `;
-      document.getElementById('country_Details').innerHTML = details;
+      document.getElementById('country_details').innerHTML = details;
       
       return fetch('https://restcountries.com/v3.1/region/' + 
           country.region);
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
               </div>
           `;
       }).join('');
-      document.getElementById('same_Region_Countries').innerHTML = `
+      document.getElementById('same_region_countries').innerHTML = `
           <h2>Countries in the Same Region (${region})</h2>
           <div class="country-list">${sameRegionCountriesList}</div>
       `;
@@ -146,6 +146,6 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error('Error fetching data:', error);
       document.getElementById('country_Details').innerHTML
        = '<p>An error occurred: ' + error.message + '</p>';
-      document.getElementById('same_Region_Countries').innerHTML = '';
+      document.getElementById('same_region_countries').innerHTML = '';
   });
 }
