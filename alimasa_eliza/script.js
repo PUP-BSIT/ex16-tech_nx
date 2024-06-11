@@ -5,7 +5,7 @@ function writeNewComment() {
   let comment = document.getElementById('comment').value;
   let timestamp = new Date();
 
-  let commentObject = { name, comment, timestamp };
+  let commentObject = { name: name, comment: comment, timestamp: timestamp };
 
   comments.push(commentObject);
   sortComments();
@@ -20,20 +20,25 @@ function displayComments() {
   let comment_list = document.getElementById('comment_list');
   comment_list.innerHTML = '';
 
-  comments.forEach(comment => {
+  comments.forEach(function(comment) {
     let li = document.createElement('li');
-    li.innerHTML = `${comment.comment} - <b>${comment.name}</b> <br><small>${new Date(comment.timestamp).toLocaleString()}</small>`;
+    li.innerHTML = `${comment.comment} - <b>${comment.name}</b> 
+      <br><small>${new Date(comment.timestamp).toLocaleString()}</small>`;
     comment_list.appendChild(li);
   });
 }
 
 function sortComments(order) {
-    if (order === 'asc') {
-      comments.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
-    } else {
-      comments.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-    }
-    displayComments();
+  if (order === 'asc') {
+    comments.sort(function(a, b) {
+      return new Date(a.timestamp) - new Date(b.timestamp);
+    });
+  } else {
+    comments.sort(function(a, b) {
+      return new Date(b.timestamp) - new Date(a.timestamp);
+    });
+  }
+  displayComments();
 }
 
 document.getElementById('asc_button').addEventListener('click', function() {
@@ -44,9 +49,10 @@ document.getElementById('desc_button').addEventListener('click', function() {
   sortComments('desc');
 });
 
-document.getElementById('comment_form').addEventListener('submit', function(event) {
+document.getElementById('comment_form').addEventListener('submit', 
+  function(event) {
   event.preventDefault();
-  addComment();
+  writeNewComment();
 });
 
 document.getElementById('name').addEventListener('input', verification);
