@@ -1,0 +1,36 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="restapi_style.css" rel="stylesheet" /> 
+    <title>Movie Manager</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Movies</h1>
+        <input type="hidden" id="movie_id">
+        <input type="text" id="GroupName" placeholder="Group Name">
+        <input type="text" id="Song" placeholder="Song">
+        <input type="text" id="FandomName" placeholder="Fandom Name">
+        <input type="text" id="DebutYear" placeholder="Debut Year">
+        <input type="text" id="Agency" placeholder="Agency">
+        <button id="add_btn" onclick="insertKpop()">Add Kpop Group</button>
+        <table id="kpop_table">
+            <thead>
+                <tr>
+                    <th>Group Name</th>
+                    <th>Song</th>
+                    <th>Fandom Name</th>
+                    <th>Debut Year</th>
+                    <th>Agency</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="restapi.js"></script>
+</body>
+</html>
