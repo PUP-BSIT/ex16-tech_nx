@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alimasa Eliza Page</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="head">Introduction</h1>
+    </div>
+    <hr />
+    <div>
+      <div class="image">
+        <img class="pfp" src="pfp.jpg" alt="Profile Picture" />
+        <h1 class="heading">Alimasa Eliza</h1>
+        <p class="description">Student at PUP-Taguig taking DIT course.</p>
+      </div>
+    </div>
+    <hr />
+    <div class="content-container">
+      <div class="content">
+        <h2 class="info">My Interests and Hobbies</h2>
+        <hr />
+        <ul class="info-li">
+          <li>Playing online games</li>
+          <li>Listening to music</li>
+          <li>Sleeping</li>
+          <li>Reading</li>
+          <li>Cats</li>
+        </ul>
+      </div>
+      <hr />
+      <div class="content">
+        <h2 class="files">My Works</h2>
+        <hr />
+        <ol class="files-li">
+          <li><a href="./countries.html">Countries</a></li>
+          <li><a href="./test.html">Test</a></li>
+          <li><a href="./test1.html">Test 1</a></li>
+          <li><a href="./test2.html">Test 2</a></li>
+          <li><a href="./test3.html">Test 3</a></li>
+          <li><a href="./test4.html">Test 4</a></li>
+        </ol>
+      </div>
+    </div>
+    <hr />
+    <div class="content">
+      <h2 class="testi">Testimonials</h2>
+      <hr />
+      <ul class="testi-li">
+        <li>
+          I find this website to be great. Its user-friendly interface. -
+          Mikaella
+        </li>
+        <li>
+          Creative and Beautiful website. It exceeded my expectations. Good Job!
+          - Sofia
+        </li>
+        <li>
+          Her attention to detail and dedication to excellence were evident in
+          every aspect of her website. - Alona
+        </li>
+        <li>
+          Creativity and dedication shine through in every project. A very good
+          work for you! - Precious
+        </li>
+      </ul>
+    </div>
+    <hr />
+    <div class="content">
+      <h2 class="goals">My Goals</h2>
+      <hr />
+      <ul class="goals-li">
+        <li>Gain Weight</li>
+        <li>Travel the world</li>
+        <li>Start a business</li>
+        <li>Build my self confidence</li>
+        <li>Improve and develop skills</li>
+        <li>Provide the needs of stray animals</li>
+      </ul>
+    </div>
+    <hr />
+    <div>
+      <h2 class="remarks">Comment Section</h2>
+      <hr />
+      <div class="content">
+        <div>
+          <button onclick="sortComments('asc')">Oldest</button>
+          <button onclick="sortComments('desc')">Newest</button>
+        </div>
+        <ul class="com-li" id="comment_list"></ul>
+      </div>
+      <hr />
+      <h2 class="comment-form">Comment Form</h2>
+      <hr />
+      <form>
+        <div class="lname">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" oninput="verification()" />
+        </div>
+        <div class="comment">
+          <label for="comment">Comment:</label>
+          <textarea
+            id="comment"
+            name="comment"
+            rows="5"
+            cols="50"
+            oninput="verification()">
+          </textarea>
+        </div>
+        <div class="submit">
+          <button
+            type="button"
+            id="save_button"
+            onclick="writeNewComment()"
+            disabled>
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <hr />
+    <div class="content">
+      <h2 class="thoughts">Thoughts</h2>
+      <hr />
+      <p class="oc">
+        Online classes are really convenient. You don't have to wake up early or
+        rush through your morning routine to make it to school on time. You can
+        attend class from home or anywhere with internet, which saves time and
+        removes the stress of commuting. But in face-to-face classes, like when
+        learning programming, I find it easier to focus and learn. Direct
+        interaction with teachers and classmates helps clear up questions
+        quickly and lets us work together on problems. Plus, being in a
+        structured classroom helps me stay focused without distractions. In
+        online classes, distractions like chores and noisy neighbors can make it
+        hard to concentrate. Many students also seem to be less engaged during
+        online classes, doing other activities instead of paying attention. It
+        can sometimes feel like background noise rather than effective learning.
+      </p>
+    </div>
+    <hr />
+    <div class="content">
+      <h2 class="gallery">Gallery</h2>
+      <hr />
+      <div class="polaroid">
+        <img
+          src="https://i.pinimg.com/564x/59/36/72/593672472ecdecbf430b1a91be90d228.jpg"
+          alt="Kuromi"/>
+        <div class="container">
+          <p>Kuromi</p>
+        </div>
+      </div>
+      <div class="polaroid">
+        <img
+          src="https://i.pinimg.com/564x/c5/0a/df/c50adf2760501c21f933074159208088.jpg"
+          alt="Melody"/>
+        <div class="container">
+          <p>Melody</p>
+        </div>
+      </div>
+      <div class="polaroid">
+        <img
+          src="https://i.pinimg.com/564x/f8/1c/62/f81c62405e1825eeb3ef85a6164bf2a6.jpg"
+          alt="Cinnamoroll"/>
+        <div class="container">
+          <p>Cinnamoroll</p>
+        </div>
+      </div>
+      <div class="polaroid">
+        <img
+          src="https://i.pinimg.com/564x/9f/c3/1d/9fc31d6dd8b381178cc5a0b42360faa4.jpg"
+          alt="Keroppi"/>
+        <div class="container">
+          <p>Keroppi</p>
+        </div>
+      </div>
+      <div class="polaroid">
+        <img
+          src="https://i.pinimg.com/564x/74/99/cc/7499cc5ef38c72247042323cc72e6b13.jpg"
+          alt="Hello Kitty"/>
+        <div class="container">
+          <p>Hello Kitty</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="details">
+      <h2 class="contacts">Contact Me</h2>
+      <hr />
+      <form id="comment_form">
+        <div class="email">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="full-name">
+          <label for="full-name">Full Name:</label>
+          <input type="text" id="full_name" name="full-name" required />
+        </div>
+        <div class="subject">
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required />
+        </div>
+        <div class="age">
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" required />
+        </div>
+        <div class="copy">
+          <div class="send-copy">
+            <label for="copy">Send me a copy</label>
+            <input type="checkbox" id="copy" name="copy" />
+          </div>
+          <div class="message">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="2" cols="20"></textarea>
+          </div>
+          <div class="submit">
+            <input type="submit" value="Submit" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="script.js">
+    </script>
+  </body>
+</html>

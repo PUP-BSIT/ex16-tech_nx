@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  height: 40px;
+  width: auto;
+  background: #ffdfdf;
+}
+
+hr {
+  border-top: 2px solid #fec7b4;
+}
+
+.heading,
+.description {
+  text-align: center;
+}
+
+.image {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.pfp {
+  width: 100px;
+  border: 2px solid pink;
+  margin-bottom: 10px;
+}
+
+.oc {
+  padding: 25px;
+  text-align: justify;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.content {
+  text-align: center;
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+
+.info,
+.files,
+.testi,
+.gallery,
+.head,
+.contacts,
+.goals,
+.remarks,
+.comment-form,
+.thoughts {
+  font-size: 15px;
+  background-color: #ffdfdf;
+  padding: 10px;
+  text-align: center;
+}
+
+.info-li,
+.files-li,
+.testi-li,
+.com-li,
+.goals-li {
+  padding: 20px;
+  display: inline-block;
+  text-align: left;
+}
+
+.polaroid {
+  justify-content: center;
+  text-align: center;
+  width: 30%;
+  box-shadow: 8px 10px 10px #ffdfdf;
+  margin-top: 15px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.polaroid img {
+  min-width: 100px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.details {
+  font-family: Arial, Helvetica, sans-serif;
+  grid-template-areas:
+    "email"
+    "full-name"
+    "subject"
+    "age"
+    "copy"
+    "submit";
+}
+
+.message {
+  width: 100px;
+}
+
+.email {
+  grid-area: email;
+}
+
+.full-name {
+  grid-area: full-name;
+}
+
+.subject {
+  grid-area: subject;
+}
+
+.age {
+  grid-area: age;
+}
+
+.copy {
+  grid-area: copy;
+}
+
+.send-copy {
+  grid-area: send-copy;
+}
+
+.submit {
+  grid-area: submit;
+  padding: 10px;
+  text-align: center;
+}
+
+.email,
+.full-name,
+.subject,
+.age,
+.copy {
+  border: 1px solid pink;
+  padding: 20px;
+}
+
+@media (min-width: 425px) {
+  .details > form {
+    display: grid;
+    grid-template-areas:
+      "email"
+      "full-name"
+      "subject"
+      "age"
+      "copy"
+      "submit";
+  }
+}
+
+@media (min-width: 426px) and (max-width: 1440px) {
+  .details > form {
+    display: grid;
+    grid-template-areas:
+      "email full-name"
+      "subject age"
+      "copy copy"
+      "submit submit";
+  }
+}
+
+.lname {
+  grid-area: name;
+  padding: 10px;
+}
+
+.comment {
+  grid-area: comment;
+  width: 200px;
+  padding: 10px;
+}
