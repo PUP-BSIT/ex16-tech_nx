@@ -15,11 +15,11 @@ countries-list {
   display: inline-block; 
   margin: 10px; 
   text-align: center;
-  }
+}
   
-  .country-img {
+.country-img {
     width: 50px;
-  }
+}
 
 .position {
   flex-direction: column;
@@ -145,7 +145,7 @@ img {
 .fullname,
 .age,
 .subject,
-.sendcopy {
+.copy {
   border: 1px solid black;
   padding: 10px;
 }
@@ -177,7 +177,7 @@ img {
   grid-area: subject;
 }
 
-.sendcopy {
+.copy {
   grid-area: sendcopy;
 }
 
@@ -197,7 +197,7 @@ img {
     grid-template-areas:
       "email fullname"
       "age subject"
-      "sendcopy sendcopy"
+      "copy copy"
       "message message"
       "submit submit";
     grid-gap: 10px;

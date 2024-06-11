@@ -64,7 +64,7 @@ function searchCountry() {
   var countryName = document.getElementById('countryInput').value.trim();
   if (!countryName) {
     document.getElementById('countryDetails').innerHTML = '<p>Please enter a country name.</p>';
-    document.getElementById('sameRegionCountries').innerHTML = '';
+    document.getElementById('sameregioncountries').innerHTML = '';
     return;
   }
 
@@ -114,15 +114,15 @@ function searchCountry() {
               </div>
           `;
       }).join('');
-      document.getElementById('same_Region_Countries').innerHTML = `
+      document.getElementById('same_region_countries').innerHTML = `
           <h2>Countries in the Same Region (${region})</h2>
           <div class="country-list">${sameRegionCountriesList}</div>
       `;
   })
   .catch(function(error) {
       console.error('Error fetching data:', error);
-      document.getElementById('country_Details').innerHTML
+      document.getElementById('country_details').innerHTML
        = '<p>An error occurred: ' + error.message + '</p>';
-      document.getElementById('same_Region_Countries').innerHTML = '';
+      document.getElementById('same_region_countries').innerHTML = '';
   });
 }
