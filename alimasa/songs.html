@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="songs_style.css">
+    <title>Song List</title>
+</head>
+<body>
+    <form>
+        <label>Title</label>
+        <input type="text" name="title" id="title" 
+               placeholder="Enter title" required>
+        <label>Artist</label>
+        <input type="text" name="artist" id="artist" 
+               placeholder="Enter artist" required>
+        <label>Genre</label>
+        <input type="text" name="genre" id="genre" 
+            placeholder="Enter genre" required>
+        <label>Album</label>
+        <input type="text" name="album" id="album"
+            placeholder="Enter album" required>
+        <label>Duration</label>
+        <input type="text" name="duration" id="duration"
+            placeholder="Enter duration" required>
+        <button type="submit" onclick="submitSongs()">Submit</button>
+    </form>
+    <table id="songs_list">
+        <tr>
+          <th>Songs List</th>
+          <th>Title</th>
+        </tr>
+      </table>      
+    <script src="songs_script.js"></script>
+</body>
+</html>
