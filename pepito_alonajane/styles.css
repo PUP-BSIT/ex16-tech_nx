@@ -1,0 +1,198 @@
+.box {
+  background-image: url('https://i.pinimg.com/736x/af/eb/b6/afebb655369668445f242cd4bccc7c42.jpg');
+  background-color: #f8cfcf;
+  padding: 20px;
+  border:5px solid rgb(252, 157, 172);
+  border-radius: 5px;
+  box-shadow: 0 10px 8px rgba(240, 192, 192, 0.1);
+  margin-bottom: 10px;
+}
+
+.box-heading {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 30px;
+  border: 5px solid rgb(252, 157, 172);
+  border-radius: 10px;
+  padding: 10px; 
+  margin-bottom: 25px;
+  text-align: center;
+  background-color:white; 
+}
+
+.box-paragraph {
+  font: 100;
+  font-size: 17px;
+  border: 2px solid rgb(252, 157, 172);
+  border-radius: 10px;
+  padding: 10px; 
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: white; 
+  color: #3a3535;
+  display: block;
+}
+
+.container {
+  display: block;
+  border: 5px solid rgb(252, 157, 172);
+  background-color: #f8cfcf;
+  border-radius: 10px;
+  margin-bottom: 5px; 
+}
+
+.section {
+  margin-bottom: 10px;
+  margin-left:40px; 
+}
+
+#comment_form {
+  margin-top: 20px;
+}
+
+#comment_form input[type="text"],
+#comment_form textarea {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+#comment_form button {
+  width: 50%;
+}
+
+#comment_form button:disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
+}
+
+#commentsSection {
+  margin-top: 20px;
+  margin-right: 400px;
+}
+  
+.comment {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+  
+.comment strong {
+  color: #333;
+ }
+  
+.comment time {
+  font-size: 0.9em;
+  color: #666;
+}
+  
+.comment p {
+  margin: 5px 0 0 0;
+}
+  
+.gallery {
+  border:5px solid rgb(252, 157, 172);
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.image-container {
+  background-image: url('https://i.pinimg.com/736x/af/eb/b6/afebb655369668445f242cd4bccc7c42.jpg');
+  text-align: center;   
+}
+
+.image-container img {
+  border: 3px solid rgb(8, 8, 8); 
+  padding: 5px;
+  margin: 0 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 200px;
+  height: auto;
+}
+
+.email {
+  grid-area: email;
+}
+
+.full_name {
+  grid-area: full_name;
+}
+
+.age {
+  grid-area: age;
+}
+
+.subject {
+  grid-area: subject;
+}
+
+.message {
+  grid-area: message;
+}
+
+.submit {
+  grid-area: submit;
+  text-align: center;
+}
+
+.copy {
+  grid-area: copy;
+}
+
+.email,
+.full_name, 
+.subject,
+.age, 
+.message,
+.submit {
+  border: 1px solid;
+  padding: 20px;
+}
+
+.header {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact {
+  display: grid;
+  padding: 20px;
+  border-radius: 10px;
+  grid-gap: 10px;   
+  align-items: center;
+}
+
+@media (min-width: 426px) {
+  .contact>form {
+  display: grid;
+  grid-template-areas:
+  "email full_name"
+  "age subject"
+  "copy copy"
+  "message message"
+  "submit submit";
+    }
+}
+
+@media (max-width: 426px) {
+  .contact > form {
+  display: grid;
+  grid-template-areas: 
+  "email"
+  "full_name"
+  "age"
+  "subject"
+  "copy"
+  "message"
+  "submit";
+    }
+    
+.contact > form input[type="text"],
+.contact > form textarea,
+.contact > form button {
+  width: 100%;
+    }
+}
